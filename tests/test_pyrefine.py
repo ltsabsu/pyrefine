@@ -85,7 +85,7 @@ class TestCLI:
                                  doaj_data_filename,
                                  doaj_data_clean_filename):
         runner = CliRunner()
-        out_file = mktemp()
+        out_file = mkstemp()
         result = runner.invoke(cli.execute,
                                [doaj_script_filename, doaj_data_filename,
                                 '-o', out_file])
